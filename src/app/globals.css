@@ -1,26 +1,67 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@import 'tailwindcss';
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Color Palette */
+  --color-dark: oklch(26.8% 0.007 34.298);
+  --color-darker: oklch(21.6% 0.006 56.043);
+  --color-darkest: oklch(14.7% 0.004 49.25);
+  --color-light: oklch(86.9% 0.005 56.366);
+  --color-lighter: oklch(98.5% 0.001 106.423);
+  --color-lightest: oklch(98.5% 0.001 106.423);
+  --color-howdy-amber: oklch(82.8% 0.189 84.429);
+  --color-deep-canyon: oklch(25% 0.05 30);
+  --color-warm-stone: oklch(65% 0.08 45);
+  --color-soft-sand: oklch(80% 0.06 65);
+  --color-misty-purple: oklch(45% 0.08 320);
+  --color-desert-haze: oklch(88% 0.07 50);
+  --color-sunset-orange: oklch(70% 0.18 50);
+  --color-sky-blue: oklch(75% 0.12 210);
+  --color-vibrant-teal: oklch(65% 0.14 195);
+  --color-rich-terracotta: oklch(55% 0.15 40);
+
+  /* Typography */
+  --font-sans: var(--font-quicksand);
+  --font-mono: var(--font-suse-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer layout {
+}
+
+.hero-portrait {
+  background-image: url('/images/portrait2.png');
+  background-size: clamp(1000px, 92vw, 3000px) auto;
+  background-position: 60% 70%;
+  background-repeat: no-repeat;
+  filter: brightness(0.8) contrast(1.3) saturate(0);
+}
+
+.guitar-img {
+  background-image: url('/images/guitar.png');
+  background-size: clamp(1000px, 92vw, 3000px) auto;
+  background-position: 10% 10%;
+  background-repeat: no-repeat;
+  filter: brightness(0.8) contrast(1.5) saturate(0);
+}
+
+@media (min-width: 768px) {
+  .hero-portrait {
+    background-position: 90% 70%;
+  }
+  .guitar-img {
+    background-position: 10% 10%;
+  }
 }
