@@ -37,31 +37,3 @@
     scroll-snap-type: y mandatory;
   }
 }
-
-@layer layout {
-}
-
-.hero-portrait {
-  background-image: url('/images/portrait2.png');
-  background-size: clamp(1000px, 92vw, 3000px) auto;
-  background-position: 60% 70%;
-  background-repeat: no-repeat;
-  filter: brightness(0.8) contrast(1.3) saturate(0);
-}
-
-.guitar-img {
-  background-image: url('/images/guitar.png');
-  background-size: clamp(1000px, 92vw, 3000px) auto;
-  background-position: 10% 10%;
-  background-repeat: no-repeat;
-  filter: brightness(0.8) contrast(1.5) saturate(0);
-}
-
-@media (min-width: 768px) {
-  .hero-portrait {
-    background-position: 90% 70%;
-  }
-  .guitar-img {
-    background-position: 10% 10%;
-  }
-}

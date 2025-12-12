@@ -11,11 +11,11 @@ export default function IntroBio() {
           src="/images/slotcanyon.png"
           alt="Background"
           fill
-          className="mt-16 object-cover"
+          className="mask-b-from-darker mt-16 object-cover contrast-110 saturate-110"
         />
       </div>
 
-      <div className="z-10 flex h-full w-full items-end justify-center gap-10 px-30 pb-20">
+      <div className="z-10 flex h-full w-full items-end justify-center gap-10 px-20 pb-30">
         <div className="border-misty-purple hover:border-vibrant-teal relative h-[82%] w-[24rem] overflow-hidden [border-radius:12rem_0.5rem_0.5rem_0.5rem] border-2 transition-all duration-500 hover:shadow-xl">
           <Image
             src="/images/portrait.png"

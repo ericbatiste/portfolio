@@ -7,7 +7,7 @@ export default function HomeNav() {
     <div className="fixed z-100 flex w-full items-center justify-center gap-40 px-8 py-4">
       <Link
         href="/developer"
-        className="text-lightest hover:text-dark text-xl transition duration-300"
+        className="text-lightest hover:text-dark text-2xl transition duration-300"
       >
         Developer
       </Link>
@@ -19,7 +19,7 @@ export default function HomeNav() {
       </Link>
       <Link
         href="/music"
-        className="text-lightest hover:text-dark text-xl transition duration-300"
+        className="text-lightest hover:text-dark text-2xl transition duration-300"
       >
         Musician
       </Link>
