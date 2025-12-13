@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { MoveUp } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
-export function ScrollToTopBtn() {
+export default function ScrollToTopBtn() {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -26,7 +26,7 @@ export function ScrollToTopBtn() {
       {isVisible && (
         <Link
           href={'#intro'}
-          className="bg-dark/50 text-light hover:bg-darkest fixed right-6 bottom-6 z-50 cursor-pointer rounded-full p-4 shadow-lg transition-all"
+          className="bg-light/10 text-light hover:bg-light/40 fixed right-6 bottom-6 z-50 cursor-pointer rounded-full p-4 shadow-lg transition-all"
         >
           <MoveUp size={40} />
         </Link>

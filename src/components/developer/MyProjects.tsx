@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SquareArrowOutUpRight } from 'lucide-react';
 
-export default function ProjectGallery() {
+export default function MyProjects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isInView, setIsInView] = useState(true);
 
@@ -42,14 +42,14 @@ export default function ProjectGallery() {
   }, []);
 
   return (
-    <section className="project-gallery flex min-h-screen p-6">
-      <aside className="sticky top-0 flex h-screen w-1/4 items-center justify-center">
+    <div className="project-gallery flex min-h-screen p-6">
+      <aside className="sticky top-0 flex h-screen w-1/4 flex-col items-center justify-center">
         <motion.ul
-          className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-10 pr-6"
+          className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-8 pr-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: isInView ? 1 : 0 }}
           transition={{ duration: 1.8, delay: 0.5 }}
-        >
+          >
           {projects.map((project, index) => (
             <li
               className={`w-full cursor-pointer rounded-sm px-4 py-2 transition-all duration-300 ${
@@ -83,7 +83,7 @@ export default function ProjectGallery() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }
 

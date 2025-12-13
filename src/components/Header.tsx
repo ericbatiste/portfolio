@@ -1,9 +1,9 @@
 'use client';
 
-import DevNav from './DevNav';
-import MusicNav from './MusicNav';
-import HomeNav from './HomeNav';
-import ContactNav from './ContactNav';
+import DevNav from './developer/DevNav';
+import MusicNav from './music/MusicNav';
+import HomeNav from './home/HomeNav';
+import ContactNav from './contact/ContactNav';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {

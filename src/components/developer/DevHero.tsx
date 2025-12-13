@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function IntroBio() {
+export default function DevHero() {
   return (
     <div className="flex h-screen items-center justify-center gap-20">
       <div className="from-deep-canyon via-rich-terracotta to-vibrant-teal absolute inset-0 z-0 mt-16 h-screen bg-gradient-to-t" />

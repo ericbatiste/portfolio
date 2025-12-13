@@ -1,6 +1,6 @@
 'use client';
 
-import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/contact/ContactForm';
 import { useEffect } from 'react';
 
 export default function ContactPage() {
