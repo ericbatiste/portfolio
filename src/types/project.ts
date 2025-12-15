@@ -3,17 +3,11 @@ export type ProjectLink = string | {
   backend?: string;
 };
 
-export type ProjectColor = {
-  bgColor: string;
-  textColor: string;
-}
-
 export interface Project {
   title: string;
   description: string;
   techStack: string[];
   link: ProjectLink;
-  color: ProjectColor;
 }
 
 export interface ProjectCardProps {

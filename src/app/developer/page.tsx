@@ -9,7 +9,7 @@ export default function Developer() {
     <div className="bg-darker text-lighter min-h-screen">
       <ScrollToTopBtn />
 
-      <section className="snap-center">
+      <section id='chicken' className="snap-center">
         <DevHero />
       </section>
 

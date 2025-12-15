@@ -5,8 +5,7 @@ const projects: Project[] = [
     title: "Our Travis Country",
     description: "A community engagement platform for HOA members featuring user authentication, a protected admin dashboard, and custom email functionality. Built with Next.js and Supabase.",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Mailgun", "ReactQuill"],
-    link: "https://github.com/ericbatiste/travis-country-hoa",
-    color: { bgColor: "bg-sky-600", textColor: "text-sky-600" }
+    link: "https://github.com/ericbatiste/travis-country-hoa"
   },
   {
     title: "Maptivity",
@@ -15,22 +14,19 @@ const projects: Project[] = [
     link: {
       frontend: "https://github.com/ericbatiste/maptivity",
       backend: "https://github.com/ericbatiste/maptivity_be"
-    },
-    color: { bgColor: "bg-teal-600", textColor: "text-teal-600" }
+    }
   },
   {
     title: "Cocktail Finder",
     description: "A web application for discovering and saving cocktail recipes. Features Firebase authentication, comprehensive Cypress testing, and responsive design across all device sizes.",
     techStack: ["React", "Router", "Firebase", "Cypress", "JavaScript", "CSS"],
-    link: "https://github.com/ericbatiste/cocktail-finder",
-    color: { bgColor: "bg-violet-600", textColor: "text-violet-600" }
+    link: "https://github.com/ericbatiste/cocktail-finder"
   },
   // {
   //   title: "Streaming on the Go",
   //   description: "Mobile app enabling simultaneous live video streaming and location sharing. Integrates Firebase Realtime DB with geolocation tracking and Agora SDK for video streaming.",
   //   techStack: ["React Native", "JavaScript", "Firebase Realtime DB", "Jest", "CSS", "Agora SDK", "React Native Geolocation"],
-  //   link: "https://github.com/2310-combined/live-stream-react-native",
-  //   color: { bgColor: "bg-red-600", textColor: "text-red-600" }
+  //   link: "https://github.com/2310-combined/live-stream-react-native"
   // },
   {
     title: "Fido's Trick Log",
@@ -39,8 +35,7 @@ const projects: Project[] = [
     link: {
       frontend: "https://github.com/ericbatiste/dog-tricks-ui",
       backend: "https://github.com/ericbatiste/dog-tricks-api",
-    },
-    color: { bgColor: "bg-amber-600", textColor: "text-amber-600" }
+    }
   }
 ];
 

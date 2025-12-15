@@ -15,13 +15,15 @@ export default function DevHero() {
         />
       </div>
 
-      <div className="z-10 flex h-full w-full items-end justify-center gap-10 px-20 pb-30">
+      <div className="relative z-10 flex h-full w-full items-end justify-center gap-10 px-20 pb-30">
         <div className="border-misty-purple hover:border-vibrant-teal relative h-[82%] w-[24rem] overflow-hidden [border-radius:12rem_0.5rem_0.5rem_0.5rem] border-2 transition-all duration-500 hover:shadow-xl">
           <Image
             src="/images/portrait.png"
             alt="Profile Picture"
+            priority
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="flex flex-col gap-4 rounded-md pb-12">

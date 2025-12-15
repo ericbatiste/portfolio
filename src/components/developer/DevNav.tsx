@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-export default function MusicNav() {
+export default function DevNav() {
   const navLinks = [
     { href: '#about-me', label: 'aboutMe' },
     { href: '#my-projects', label: 'myProjects' },
