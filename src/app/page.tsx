@@ -28,7 +28,7 @@ export default function Home() {
         className="fixed inset-0 z-0 h-screen w-full overflow-hidden"
         style={{ y: ySky, scale, filter }}
       >
-        <div>
+        <div className='relative'>
           <Image
             src="/images/cloud.png"
             alt="Clouds"
@@ -44,7 +44,7 @@ export default function Home() {
         className="fixed inset-0 z-10 h-screen w-full overflow-hidden"
         style={{ y: yMtn, scale, filter }}
       >
-        <div className="mt-60">
+        <div className="relative mt-60">
           <Image
             src="/images/skintrack.png"
             alt="Snowy Mountain Tracks"
