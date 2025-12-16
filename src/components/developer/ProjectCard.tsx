@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: ProjectCardProps){
         </p>
       </div>
 
-      <div className="flex flex-col gap-4 font-mono tracking-widest">
+      <div className="flex flex-col gap-4 font-mono">
         <h4 className="text-vibrant-teal text-4xl font-light">Tech Stack</h4>
         <div className="grid grid-cols-2 gap-2 px-4 md:grid-cols-3">
           {project.techStack.map((tech, index) => (

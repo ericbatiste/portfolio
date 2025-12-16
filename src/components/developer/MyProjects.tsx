@@ -20,9 +20,7 @@ export default function MyProjects() {
           }
         });
       },
-      {
-        threshold: 0.5,
-      }
+      { threshold: 0.5 }
     );
 
     projectRefs.current.forEach((element) => {
@@ -54,10 +52,7 @@ export default function MyProjects() {
               }`}
               key={index}
               onClick={() => {
-                projectRefs.current[index]?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'center',
-                });
+                projectRefs.current[index]?.scrollIntoView();
               }}
             >
               <h2 className="text-right text-xl">{project.title}</h2>

@@ -21,7 +21,7 @@
 
   /* Typography */
   --font-sans: var(--font-quicksand);
-  --font-mono: var(--font-suse-mono);
+  --font-mono: var(--font-source-code);
 }
 
 @layer base {
