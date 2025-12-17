@@ -65,7 +65,7 @@ export default function Home() {
           animate={{ opacity: 0.8, scale: 1 }}
           transition={{ duration: 2, delay: 0.8, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
-          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-full rounded-t-full border-t-2 bg-gradient-to-b to-transparent md:w-[80%] lg:w-[60%]"
+          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-full rounded-t-full border-t-2 bg-gradient-to-b to-transparent md:w-2xl lg:w-3xl"
           style={{
             boxShadow: '0 -50px 100px -30px rgba(255,253,236,0.8)',
           }}
@@ -96,9 +96,9 @@ export default function Home() {
 
       <section
         ref={containerRef}
-        className="pointer-events-none relative z-10 flex h-screen w-full snap-center items-center justify-center"
+        className="pointer-events-none relative z-10 flex h-screen w-full snap-center items-center justify-center pt-6"
       >
-        <div className="relative h-[70%] w-full md:w-[80%]">
+        <div className="relative h-[80%] w-full md:w-[80%]">
           <div className="grid h-full grid-cols-8 gap-2">
             <div className="border-lightest col-span-1 rounded-xl md:rounded-3xl border-2" />
             <div className="col-span-1 flex flex-col gap-2">

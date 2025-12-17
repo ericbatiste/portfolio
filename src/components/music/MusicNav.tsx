@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import NavMenuBtn from '../NavMenuBtn';
 
 export default function MusicNav() {
   const navLinks = [{ href: '/contact', label: 'Contact' }];
@@ -13,7 +14,7 @@ export default function MusicNav() {
       >
         EDB
       </Link>
-      <div className="flex space-x-4">
+      <div className="hidden space-x-4 md:flex">
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -24,6 +25,7 @@ export default function MusicNav() {
           </Link>
         ))}
       </div>
+      <NavMenuBtn navlinks={navLinks} />
     </nav>
   );
 }

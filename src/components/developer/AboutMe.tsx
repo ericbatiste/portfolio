@@ -27,7 +27,7 @@ export default function AboutMe() {
   return (
     <div className="from-deep-canyon to-darker flex h-screen items-center justify-center bg-gradient-to-b p-4 md:p-8 lg:p-12">
       <div className="md:w-1/2 md:pr-10">
-        <div className="text-light font-sans text-3xl/[1.3] font-light lg:leading-relaxed">
+        <div className="text-lighter font-sans text-3xl font-light md:text-[1.6em] lg:text-3xl leading-relaxed">
           <p className="mb-2 md:mb-4">Hi there,</p>
           <p className="mb-4 md:mb-6">
             I am a Fullstack Developer based in Boulder, CO. The wealth of my
@@ -82,5 +82,3 @@ export default function AboutMe() {
     </div>
   );
 }
-
-

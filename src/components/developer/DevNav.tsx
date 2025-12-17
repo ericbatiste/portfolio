@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import NavMenuBtn from '../NavMenuBtn';
 import { useEffect, useState } from 'react';
 
 export default function DevNav() {
@@ -32,17 +33,18 @@ export default function DevNav() {
         EDB
       </Link>
 
-      <div className="flex space-x-4">
+      <div className="hidden space-x-4 md:flex">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`${hash === link.href ? 'text-rich-terracotta' : 'text-lightest'} hover:text-rich-terracotta font-mono font-light text-2xl transition duration-300 hover:cursor-pointer`}
+            className={`${hash === link.href ? 'text-rich-terracotta' : 'text-lightest'} hover:text-rich-terracotta font-mono text-2xl font-light transition duration-300 hover:cursor-pointer`}
           >
             {link.label}
           </Link>
         ))}
       </div>
+      <NavMenuBtn navlinks={navLinks} />
     </nav>
   );
 }
