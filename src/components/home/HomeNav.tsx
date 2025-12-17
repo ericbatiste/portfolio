@@ -6,7 +6,7 @@ import NavMenuBtn from '../NavMenuBtn';
 export default function HomeNav() {
   const navLinks = [
     { href: '/developer', label: 'Developer' },
-    { href: '/musican', label: 'Musician' },
+    { href: '/music', label: 'Musician' },
   ];
 
   return (
