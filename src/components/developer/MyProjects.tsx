@@ -36,7 +36,7 @@ export default function MyProjects() {
 
   return (
     <div className="flex min-h-screen p-6">
-      <aside className="sticky top-0 flex h-screen w-1/4 flex-col items-center justify-center">
+      <aside className="sticky top-0 hidden h-screen w-1/4 flex-col items-center justify-center lg:flex">
         <motion.ul
           className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-8 pr-6"
           initial={{ opacity: 0 }}
@@ -69,7 +69,7 @@ export default function MyProjects() {
             }}
             data-id={`project-${index}`}
             key={index}
-            className="flex h-screen w-full snap-center snap-always flex-col items-center justify-center px-12"
+            className="flex h-screen w-full snap-center snap-always flex-col items-center justify-center md:px-8 lg:px-12"
           >
             <ProjectCard project={project} />
           </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { IconData, IconCircleProps, RepelIconProps } from '@/types/techIcons';
 import { FEIcons, BEIcons } from '@/data/techIcons';
 import {
@@ -12,28 +13,79 @@ import {
 } from 'motion/react';
 import { useState, useEffect, useRef } from 'react';
 
-export default function TechStack() {
+export default function AboutMe() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
+  const [windowWidth, setWindowWidth] = useState<number>(() =>
+    typeof window !== 'undefined' ? window.innerWidth : 1200
+  );
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   if (!mounted) return null;
 
   return (
-    <div className="from-deep-canyon to-darker flex h-screen w-screen items-center justify-center gap-20 bg-gradient-to-b">
-      <div className="w-md pr-20">
-        <p className="text-soft-sand text-6xl/[1.5] font-bold">
-          Fullstack Developer specializing Next.js and TypeScript.
-        </p>
+    <div className="from-deep-canyon to-darker flex h-screen items-center justify-center bg-gradient-to-b p-4 md:p-8 lg:p-12">
+      <div className="md:w-1/2 md:pr-10">
+        <div className="text-light font-sans text-3xl/[1.3] font-light lg:leading-relaxed">
+          <p className="mb-2 md:mb-4">Hi there,</p>
+          <p className="mb-4 md:mb-6">
+            I am a Fullstack Developer based in Boulder, CO. The wealth of my
+            experience is in{' '}
+            <span className="text-soft-sand font-normal">Next.js</span>,{' '}
+            <span className="text-soft-sand font-normal">React</span>,{' '}
+            <span className="text-soft-sand font-normal">JavaScript</span>, and{' '}
+            <span className="text-soft-sand font-normal">TypeScript</span>;
+            however, my curiosity and desire for growth has led me to take on
+            other technologies such as SwiftUI and Ruby on Rails.
+          </p>
+          <p className="mb-2 md:mb-4">
+            Looking to connect?{' '}
+            <Link
+              href={'/contact'}
+              className="text-sky-blue hover:text-vibrant-teal text-nowrap"
+            >
+              --drop me a line--
+            </Link>
+          </p>
+        </div>
       </div>
-      <div className="relative h-[500px] w-[500px]">
+      <div className="relative hidden w-1/2 md:block">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <IconCircle icons={FEIcons} radius={230} iconSize={80} />
+          {(() => {
+            const radius =
+              windowWidth < 900 ? 140 : windowWidth < 1150 ? 180 : 230;
+            const iconSize =
+              windowWidth < 900 ? 30 : windowWidth < 1150 ? 50 : 80;
+            return (
+              <IconCircle icons={FEIcons} radius={radius} iconSize={iconSize} />
+            );
+          })()}
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <IconCircle icons={BEIcons} radius={100} iconSize={60} reverse />
+          {(() => {
+            const radius =
+              windowWidth < 900 ? 60 : windowWidth < 1150 ? 80 : 100;
+            const iconSize =
+              windowWidth < 900 ? 20 : windowWidth < 1150 ? 34 : 60;
+            return (
+              <IconCircle
+                icons={BEIcons}
+                radius={radius}
+                iconSize={iconSize}
+                reverse
+              />
+            );
+          })()}
         </div>
       </div>
     </div>
@@ -45,9 +97,9 @@ const IconCircle = ({
   radius,
   iconSize,
   reverse = false,
-}: IconCircleProps & { reverse?: boolean }) => {
+}: IconCircleProps) => {
   return (
-    <div className="relative flex h-96 w-96 items-center justify-center">
+    <div className="relative flex w-30 items-center justify-center">
       {icons.map((icon: IconData, index: number) => (
         <RepelIcon
           key={`icon-${index}`}

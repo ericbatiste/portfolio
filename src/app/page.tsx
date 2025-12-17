@@ -23,37 +23,31 @@ export default function Home() {
   const filter = useMotionTemplate`sepia(${sepia})`;
 
   return (
-    <div ref={containerRef} className="snap-y">
+    <div ref={containerRef} className="snap-y p-2">
       <motion.div
         className="fixed inset-0 z-0 h-screen w-full overflow-hidden"
         style={{ y: ySky, scale, filter }}
       >
-        <div className='relative'>
-          <Image
-            src="/images/cloud.png"
-            alt="Clouds"
-            layout="responsive"
-            width={3872}
-            height={2592}
-            style={{ objectFit: 'contain' }}
-          />
-        </div>
+        <Image
+          src="/images/cloud.png"
+          alt="Clouds"
+          priority
+          fill
+          className="object-cover"
+        />
       </motion.div>
 
       <motion.div
-        className="fixed inset-0 z-10 h-screen w-full overflow-hidden"
+        className="fixed inset-0 top-50 z-10 h-screen w-full overflow-hidden"
         style={{ y: yMtn, scale, filter }}
       >
-        <div className="relative mt-60">
-          <Image
-            src="/images/skintrack.png"
-            alt="Snowy Mountain Tracks"
-            layout="responsive"
-            width={5184}
-            height={3456}
-            style={{ objectFit: 'contain' }}
-          />
-        </div>
+        <Image
+          src="/images/skintrack.png"
+          alt="Snowy Mountain Tracks"
+          priority
+          fill
+          className="object-cover"
+        />
       </motion.div>
 
       <section className="relative z-40 flex h-screen w-full snap-center items-center justify-center">
@@ -64,14 +58,14 @@ export default function Home() {
 
       <section
         ref={containerRef}
-        className="relative flex h-screen w-full snap-center items-center justify-center bg-transparent"
+        className="relative flex h-screen w-full snap-center items-center justify-center"
       >
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.8, scale: 1 }}
           transition={{ duration: 2, delay: 0.8, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
-          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-[50%] rounded-t-full border-t-2 bg-gradient-to-b to-transparent"
+          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-full rounded-t-full border-t-2 bg-gradient-to-b to-transparent md:w-[80%] lg:w-[60%]"
           style={{
             boxShadow: '0 -50px 100px -30px rgba(255,253,236,0.8)',
           }}
@@ -84,7 +78,7 @@ export default function Home() {
           viewport={{ once: true, amount: 'all' }}
           className="z-40 text-center text-4xl leading-18"
         >
-          <p className="text-deep-canyon drop-shadow-md drop-shadow-dark">
+          <p className="text-deep-canyon drop-shadow-dark drop-shadow-md">
             <span className="text-lighter text-7xl">Welcome,</span>
             <br />
             glad you found me!
@@ -93,7 +87,7 @@ export default function Home() {
           <Link
             href={'/contact'}
             scroll={false}
-            className="text-howdy-amber bg-dark hover:text-dark mt-10 inline-block rounded-full px-8 py-4 text-2xl font-semibold shadow-lg ring-2 transition-colors hover:bg-howdy-amber"
+            className="text-howdy-amber bg-dark hover:text-dark hover:bg-howdy-amber mt-10 inline-block rounded-full px-8 py-4 text-2xl font-semibold shadow-lg ring-2 transition-colors"
           >
             Reach out!
           </Link>
@@ -104,34 +98,34 @@ export default function Home() {
         ref={containerRef}
         className="pointer-events-none relative z-10 flex h-screen w-full snap-center items-center justify-center"
       >
-        <div className="relative h-[70%] w-[80%]">
+        <div className="relative h-[70%] w-full md:w-[80%]">
           <div className="grid h-full grid-cols-8 gap-2">
-            <div className="col-span-1 rounded-3xl border-2 border-lightest" />
+            <div className="border-lightest col-span-1 rounded-xl md:rounded-3xl border-2" />
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-6/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-6/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-5/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-5/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-4/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-4/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-3/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-3/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-2/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-2/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="h-1/7 rounded-3xl border-2 border-lightest" />
-              <div className="grow rounded-3xl border-2 border-lightest" />
+              <div className="border-lightest h-1/7 rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
             </div>
-            <div className="col-span-1 rounded-3xl border-2 border-lightest" />
+            <div className="border-lightest col-span-1 rounded-xl md:rounded-3xl border-2" />
           </div>
 
           <div>
@@ -140,7 +134,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="border-sky-blue absolute top-6 left-6 h-[92%] w-[82%] border-t-2 border-l-2"
+              className="border-sky-blue absolute top-3 left-3 md:top-6 md:left-6 h-[92%] w-[82%] border-t-2 border-l-2"
             >
               <Link
                 href="/developer"
@@ -172,7 +166,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="border-rich-terracotta absolute right-6 bottom-6 h-[92%] w-[81%] border-r-2 border-b-2"
+              className="border-rich-terracotta absolute right-3 bottom-3 md:right-6 md:bottom-6 h-[92%] w-[82%] border-r-2 border-b-2"
             >
               <Link
                 href="/music"

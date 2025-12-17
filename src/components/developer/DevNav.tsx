@@ -32,12 +32,12 @@ export default function DevNav() {
         EDB
       </Link>
 
-      <div className="flex space-x-6">
+      <div className="flex space-x-4">
         {navLinks.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`${hash === link.href ? 'text-rich-terracotta' : 'text-lightest'} hover:text-rich-terracotta font-mono text-2xl transition duration-300 hover:cursor-pointer`}
+            className={`${hash === link.href ? 'text-rich-terracotta' : 'text-lightest'} hover:text-rich-terracotta font-mono font-light text-2xl transition duration-300 hover:cursor-pointer`}
           >
             {link.label}
           </Link>

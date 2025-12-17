@@ -9,7 +9,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="from-darkest to-misty-purple/20 flex min-h-screen justify-center bg-gradient-to-br pt-10 pb-20">
+    <div className="from-darkest to-deep-canyon/20 flex min-h-screen justify-center bg-gradient-to-br py-22">
       <div className="w-full max-w-2xl">
         <div className="mb-8 text-center">
           <h1 className="mb-3 text-4xl font-bold text-stone-200">

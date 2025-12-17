@@ -9,7 +9,7 @@ export default function ContactNav() {
   ];
 
   return (
-    <nav className="bg-darker flex w-full items-center justify-between px-8 py-4 shadow-lg">
+    <nav className="flex w-full items-center justify-between px-8 py-4">
       <Link
         href="/"
         className="text-lighter text-3xl font-bold transition duration-300 hover:text-cyan-600"

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto w-[25%] px-4">
         <div className="flex flex-col items-center space-y-6">
           <Link href={'/contact'} className="text-center">
-            <p className="text-light mb-1 transform text-2xl font-semibold transition-colors duration-200 hover:text-stone-600">
+            <p className="text-light mb-1 transform text-2xl font-semibold text-nowrap transition-colors duration-200 hover:text-stone-600">
               Get in touch
             </p>
           </Link>

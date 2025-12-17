@@ -8,6 +8,7 @@ export interface IconCircleProps {
   icons: IconData[];
   radius: number;
   iconSize: number;
+  reverse?: boolean;
 }
 
 export type RepelIconProps = {
