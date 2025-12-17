@@ -11,7 +11,7 @@ export interface IconCircleProps {
   reverse?: boolean;
 }
 
-export type RepelIconProps = {
+export type TechIconProps = {
   icon: IconData;
   index: number;
   total: number;
