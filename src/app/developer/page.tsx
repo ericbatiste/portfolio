@@ -53,7 +53,7 @@ export default function Developer() {
           sectionRefs.current[0] = el;
         }}
         id="intro"
-        className="snap-center"
+        className="snap-center flex h-screen items-center justify-center p-2"
       >
         <DevHero />
       </section>
@@ -63,7 +63,7 @@ export default function Developer() {
           sectionRefs.current[1] = el;
         }}
         id="about-me"
-        className="snap-center"
+        className="snap-center from-deep-canyon to-darker flex h-screen w-full items-center justify-center bg-gradient-to-b p-4 md:p-8 lg:p-12"
       >
         <AboutMe />
       </section>
@@ -73,6 +73,7 @@ export default function Developer() {
           sectionRefs.current[2] = el;
         }}
         id="my-projects"
+        className='flex justify-center min-h-screen p-6'
       >
         <MyProjects />
       </section>

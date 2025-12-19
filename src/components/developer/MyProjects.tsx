@@ -35,7 +35,7 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <div className="flex min-h-screen p-6">
+    <div className="flex max-w-7xl">
       <aside className="sticky top-0 hidden h-screen w-1/4 flex-col items-center justify-center lg:flex">
         <motion.ul
           className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-8 pr-6"
@@ -60,7 +60,6 @@ export default function MyProjects() {
           ))}
         </motion.ul>
       </aside>
-
       <div className="w-full">
         {projects.map((project, index) => (
           <div
@@ -69,7 +68,7 @@ export default function MyProjects() {
             }}
             data-id={`project-${index}`}
             key={index}
-            className="flex h-screen w-full snap-center snap-always flex-col items-center justify-center md:px-8 lg:px-12"
+            className="flex h-screen w-full snap-center snap-always flex-col items-center justify-center md:px-4 lg:px-8"
           >
             <ProjectCard project={project} />
           </div>

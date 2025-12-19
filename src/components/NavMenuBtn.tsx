@@ -17,7 +17,8 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
       hoverMenuLinkClass = 'hover:text-howdy-amber hover:border-lightest';
       hoverMenuClass = 'group-hover:border-darker';
     } else if (pathname === '/developer') {
-      hoverMenuLinkClass = 'hover:text-rich-terracotta hover:border-vibrant-teal';
+      hoverMenuLinkClass =
+        'hover:text-rich-terracotta hover:border-vibrant-teal';
       hoverMenuClass = 'group-hover:border-rich-terracotta';
     } else if (pathname === '/musician') {
       hoverMenuLinkClass = 'hover:text-howdy-amber hover:border-lightest';
@@ -83,7 +84,7 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
               >
                 <Link
                   href={link.href}
-                  className={`${hoverClasses[1]} block w-full border-r p-1 pr-2 text-right text-2xl text-nowrap transition-colors`}
+                  className={`${hoverClasses[1]} ${pathname === '/developer' && 'font-mono'} block w-full border-r p-1 pr-2 text-right text-2xl text-nowrap transition-colors`}
                 >
                   {link.label}
                 </Link>

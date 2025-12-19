@@ -51,9 +51,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 font-sans">
+    <form onSubmit={handleSubmit} className="space-y-4 font-sans">
       <div>
-        <label htmlFor="name" className="text-lighter mb-2 block font-medium">
+        <label htmlFor="name" className="text-lighter mb-1 block font-medium">
           Name
         </label>
         <input
@@ -64,12 +64,12 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="border-light text-lighter w-full rounded-lg border px-4 py-3 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
+          className="border-light text-lighter w-full rounded-lg border px-4 py-2 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
         />
       </div>
 
       <div>
-        <label htmlFor="email" className="text-lighter mb-2 block font-medium">
+        <label htmlFor="email" className="text-lighter mb-1 block font-medium">
           Email
         </label>
         <input
@@ -80,14 +80,14 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="border-light text-lighter w-full rounded-lg border px-4 py-3 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
+          className="border-light text-lighter w-full rounded-lg border px-4 py-2 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
         />
       </div>
 
       <div>
         <label
           htmlFor="message"
-          className="text-lighter mb-2 block font-medium"
+          className="text-lighter mb-1 block font-medium"
         >
           Message
         </label>
@@ -99,14 +99,14 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={5}
-          className="border-light text-light w-full resize-none rounded-lg border px-4 py-3 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
+          className="border-light text-light w-full resize-none rounded-lg border px-4 py-2 transition-all outline-none placeholder:text-stone-400 focus:border-transparent focus:ring-2 focus:ring-cyan-800"
         />
       </div>
 
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="text-lightest flex w-full items-center justify-center gap-2 rounded-lg bg-cyan-600 px-6 py-3 font-medium transition-colors duration-200 hover:cursor-pointer hover:bg-cyan-800 disabled:cursor-not-allowed disabled:bg-gray-600"
+        className="text-lightest flex w-full items-center justify-center gap-2 rounded-lg bg-cyan-600 px-6 py-2 font-medium transition-colors duration-200 hover:cursor-pointer hover:bg-cyan-800 disabled:cursor-not-allowed disabled:bg-gray-600"
       >
         {status === 'sending' ? (
           <>

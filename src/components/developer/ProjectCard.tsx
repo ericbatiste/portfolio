@@ -3,16 +3,16 @@ import { ProjectCardProps } from '@/types/project';
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="from-misty-purple/50 to-deep-canyon/60 hover:shadow-vibrant-teal/30 max-w-6xl rounded-md bg-gradient-to-br p-4 shadow-2xl transition-all duration-500 md:p-6 lg:p-8">
+    <article className="from-misty-purple/50 to-deep-canyon/60 hover:shadow-vibrant-teal/30 rounded-md bg-gradient-to-br p-4 shadow-2xl transition-all duration-500 md:p-6 lg:p-8">
       <div className="flex flex-col gap-2 md:gap-4 lg:gap-4 pb-4 md:pb-6">
-        <h3 className="text-lighter text-6xl font-bold">{project.title}</h3>
+        <h3 className="text-lighter text-5xl font-bold">{project.title}</h3>
         <p className="text-desert-haze px-1 md:px-2 lg:px-4 font-sans text-2xl md:leading-relaxed">
           {project.description}
         </p>
       </div>
 
       <div className="flex flex-col gap-2 md:gap-4 font-mono font-light">
-        <h4 className="text-vibrant-teal text-4xl">Tech Stack</h4>
+        <h4 className="text-vibrant-teal text-3xl">Tech Stack</h4>
         <div className="grid grid-cols-2 gap-1 md:gap-2 px-4 md:grid-cols-3">
           {project.techStack.map((tech, index) => (
             <div

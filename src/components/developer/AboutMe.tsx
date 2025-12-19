@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { FEIcons, BEIcons } from '@/data/techIcons';
 import IconCircle from './IconCircle';
 import { useState, useEffect } from 'react';
+import { Send } from 'lucide-react';
 
 export default function AboutMe() {
   const [mounted, setMounted] = useState(false);
@@ -25,13 +26,13 @@ export default function AboutMe() {
   if (!mounted) return null;
 
   return (
-    <div className="from-deep-canyon to-darker flex h-screen items-center justify-center bg-gradient-to-b p-4 md:p-8 lg:p-12">
+    <div className="flex max-w-7xl">
       <div className="md:w-1/2 md:pr-10">
-        <div className="text-lighter font-sans text-3xl font-light md:text-[1.6em] lg:text-3xl leading-relaxed">
+        <div className="text-lighter font-sans text-3xl leading-relaxed font-light md:text-[1.6em] lg:text-3xl">
           <p className="mb-2 md:mb-4">Hi there,</p>
           <p className="mb-4 md:mb-6">
-            I am a Fullstack Developer based in Boulder, CO. The wealth of my
-            experience is in{' '}
+            I am a Fullstack Developer based in the Colorado Front Range. The
+            wealth of my experience is in{' '}
             <span className="text-soft-sand font-normal">Next.js</span>,{' '}
             <span className="text-soft-sand font-normal">React</span>,{' '}
             <span className="text-soft-sand font-normal">JavaScript</span>, and{' '}
@@ -43,9 +44,10 @@ export default function AboutMe() {
             Looking to connect?{' '}
             <Link
               href={'/contact'}
-              className="text-sky-blue hover:text-vibrant-teal text-nowrap"
+              className="text-sky-blue hover:text-vibrant-teal inline-flex items-center font-mono text-2xl text-nowrap"
             >
-              --drop me a line--
+              _dropMeALine(
+              <Send className="inline h-5 w-5" />)
             </Link>
           </p>
         </div>
