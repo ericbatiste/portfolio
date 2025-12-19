@@ -31,8 +31,8 @@ export default function Home() {
         <Image
           src="/images/cloud.png"
           alt="Clouds"
-          priority
           fill
+          priority
           className="object-cover"
         />
       </motion.div>
@@ -44,8 +44,8 @@ export default function Home() {
         <Image
           src="/images/skintrack.png"
           alt="Snowy Mountain Tracks"
-          priority
           fill
+          priority
           className="object-cover"
         />
       </motion.div>
@@ -63,9 +63,9 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.8, scale: 1 }}
-          transition={{ duration: 2, delay: 0.8, ease: 'easeOut' }}
+          transition={{ duration: 1.2, delay: 0.2, ease: 'easeOut' }}
           viewport={{ once: true, amount: 0.5 }}
-          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-full rounded-t-full border-t-2 bg-gradient-to-b to-transparent md:w-2xl lg:w-3xl"
+          className="from-deep-canyon via-rich-terracotta border-deep-canyon absolute top-[18%] z-30 h-[80%] w-full rounded-t-full border-t-2 bg-linear-to-b to-transparent md:w-2xl lg:w-3xl"
           style={{
             boxShadow: '0 -50px 100px -30px rgba(255,253,236,0.8)',
           }}
@@ -74,7 +74,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0, x: 0, y: 200 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 2, ease: 'easeOut' }}
+          transition={{ duration: 1.4, ease: 'easeOut' }}
           viewport={{ once: true, amount: 'all' }}
           className="z-40 text-center text-4xl leading-18"
         >

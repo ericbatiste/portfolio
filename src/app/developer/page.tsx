@@ -42,7 +42,7 @@ export default function Developer() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
   return (
     <div className="bg-darker text-lighter">
@@ -63,7 +63,7 @@ export default function Developer() {
           sectionRefs.current[1] = el;
         }}
         id="about-me"
-        className="snap-center from-deep-canyon to-darker flex h-screen w-full items-center justify-center bg-gradient-to-b p-4 md:p-8 lg:p-12"
+        className="snap-center from-deep-canyon to-darker flex h-screen w-full items-center justify-center bg-linear-to-b p-4 md:p-8 lg:p-12"
       >
         <AboutMe />
       </section>

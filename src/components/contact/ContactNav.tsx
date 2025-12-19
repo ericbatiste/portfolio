@@ -22,7 +22,7 @@ export default function ContactNav() {
           <Link
             key={link.href}
             href={link.href}
-            className="text-xl font-semibold transition duration-300 hover:text-cyan-600"
+            className="text-xl transition duration-300 hover:text-cyan-600"
           >
             {link.label}
           </Link>

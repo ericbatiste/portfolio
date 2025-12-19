@@ -85,7 +85,7 @@ export default function TechIcon({
 
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+  }, [offsetX, offsetY]);
 
   return (
     <motion.div

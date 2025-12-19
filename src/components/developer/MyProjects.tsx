@@ -35,19 +35,19 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <div className="flex max-w-7xl">
-      <aside className="sticky top-0 hidden h-screen w-1/4 flex-col items-center justify-center lg:flex">
+    <div className="flex max-w-350">
+      <aside className="sticky top-0 hidden h-screen w-xs flex-col items-center justify-center lg:flex">
         <motion.ul
-          className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-8 pr-6"
+          className="border-rich-terracotta flex max-h-screen w-full flex-col items-end gap-2 border-r py-8 pr-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: selectedProject ? 1 : 0 }}
           transition={{ duration: 1.8, delay: 0.5 }}
         >
           {projects.map((project, index) => (
             <li
-              className={`w-full cursor-pointer rounded-sm px-4 py-2 transition-all duration-300 ${
+              className={`w-full cursor-pointer rounded-sm px-4 py-2 transition-all duration-300 text-nowrap ${
                 selectedProject?.title === project.title
-                  ? 'from-vibrant-teal/70 to-misty-purple/70 text-lighter bg-gradient-to-br font-bold shadow-lg'
+                  ? 'from-vibrant-teal/70 to-misty-purple/70 text-lighter bg-linear-to-br font-bold shadow-lg'
                   : 'text-soft-sand hover:text-rich-terracotta'
               }`}
               key={index}

@@ -6,7 +6,7 @@ export interface ContactFormData {
 
 export interface ApiResponse {
   success?: boolean;
-  data?: any;
+  data?: object;
   error?: string;
 }
 

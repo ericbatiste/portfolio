@@ -26,18 +26,18 @@ export default function AboutMe() {
   if (!mounted) return null;
 
   return (
-    <div className="flex max-w-7xl">
+    <div className="flex max-w-350">
       <div className="md:w-1/2 md:pr-10">
         <div className="text-lighter font-sans text-3xl leading-relaxed font-light md:text-[1.6em] lg:text-3xl">
           <p className="mb-2 md:mb-4">Hi there,</p>
           <p className="mb-4 md:mb-6">
-            I am a Fullstack Developer based in the Colorado Front Range. The
-            wealth of my experience is in{' '}
+            I am a Fullstack Developer based in Westminster, CO. The
+            wealth of my experience rests in{' '}
             <span className="text-soft-sand font-normal">Next.js</span>,{' '}
             <span className="text-soft-sand font-normal">React</span>,{' '}
             <span className="text-soft-sand font-normal">JavaScript</span>, and{' '}
             <span className="text-soft-sand font-normal">TypeScript</span>;
-            however, my curiosity and desire for growth has led me to take on
+            however, my curiosity and desire to grow has led me to take on
             other technologies such as SwiftUI and Ruby on Rails.
           </p>
           <p className="mb-2 md:mb-4">

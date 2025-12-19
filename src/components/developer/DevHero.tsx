@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function DevHero() {
   return (
     <>
-      <div className="from-deep-canyon via-rich-terracotta to-vibrant-teal absolute inset-0 z-0 h-screen bg-gradient-to-t" />
-      <div className="from-deep-canyon absolute inset-0 z-10 h-screen bg-gradient-to-t via-transparent to-transparent" />
+      <div className="from-deep-canyon via-rich-terracotta to-vibrant-teal absolute inset-0 z-0 h-screen bg-linear-to-t" />
+      <div className="from-deep-canyon absolute inset-0 z-10 h-screen bg-linear-to-t via-transparent to-transparent" />
 
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,8 +15,8 @@ export default function DevHero() {
         />
       </div>
 
-      <div className="relative z-10 mx-auto grid h-3/4 w-full max-w-[20rem] grid-cols-1 content-end gap-4 md:w-max md:max-w-7xl md:grid-cols-2 md:gap-6">
-        <div className="border-misty-purple hover:border-vibrant-teal relative h-[24rem] w-[18rem] justify-self-center overflow-hidden [border-radius:8rem_0.5rem_0.5rem_0.5rem] border-2 transition-all duration-500 hover:shadow-xl md:h-[30rem] md:w-[20rem] md:justify-self-end md:[border-radius:12rem_0.5rem_0.5rem_0.5rem] lg:w-[24rem]">
+      <div className="relative z-10 mx-auto grid h-3/4 w-full max-w-[20rem] grid-cols-1 content-center gap-4 md:w-max md:max-w-350 md:grid-cols-2 lg:grid-cols-[1fr_1.2fr] md:gap-6">
+        <div className="border-misty-purple hover:border-vibrant-teal relative h-96 w-[18rem] justify-self-center overflow-hidden rounded-[8rem_0.5rem_0.5rem_0.5rem] border-2 transition-all duration-500 hover:shadow-xl md:h-120 md:w-[20rem] md:justify-self-end md:rounded-[12rem_0.5rem_0.5rem_0.5rem] lg:w-[24rem]">
           <Image
             src="/images/portrait.png"
             alt="Portrait"
@@ -34,8 +34,8 @@ export default function DevHero() {
             Batiste
           </h1>
         </div>
-        <div className="mx-auto md:col-span-2">
-          <h2 className="text-vibrant-teal text-4xl font-semibold text-nowrap drop-shadow-xl md:text-6xl">
+        <div className="flex justify-center w-full md:col-span-2">
+          <h2 className="text-vibrant-teal text-4xl md:text-5xl text-nowrap drop-shadow-xl lg:text-6xl tracking-wide">
             Software Developer
           </h2>
         </div>

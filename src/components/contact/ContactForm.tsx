@@ -46,7 +46,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       setStatus('error');
-      setErrorMessage('An unexpected error occurred. Please try again.');
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
     }
   };
 

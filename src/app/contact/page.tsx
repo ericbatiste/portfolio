@@ -10,7 +10,7 @@ export default function ContactPage() {
   }, []);
 
   return (
-    <div className="from-darkest to-deep-canyon/20 flex min-h-screen items-center justify-center bg-gradient-to-br p-2">
+    <div className="from-darkest to-deep-canyon/20 flex min-h-screen items-center justify-center bg-linear-to-br p-2">
       <div className="my-20 w-full max-w-xl">
         <div className="mb-4 text-center md:mb-6">
           <h1 className="mb-3 text-3xl font-bold text-stone-200">

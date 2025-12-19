@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Geologica, Quicksand, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
-import { Variable } from 'lucide-react';
 
 const geologica = Geologica({
   variable: '--font-primary',
@@ -30,12 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior='smooth'>
+    <html lang="en" data-scroll-behavior="smooth">
       <body
         className={`${geologica.className} ${quicksand.variable} ${splineSansMono.variable} bg-darkest antialiased`}
       >
         <Header />
-        <main className="">{children}</main>
+        {children}
       </body>
     </html>
   );
