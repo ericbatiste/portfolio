@@ -2,6 +2,12 @@ import { Project } from "../types/project";
 
 const projects: Project[] = [
   {
+    title: "Personal Website",
+    description: "You're looking at it! Built with intention and care to showcase my skills, some projects I've worked on, and my instincs for design and user experience. Like what you see? I'd like to hear from you!",
+    techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Resend"],
+    link: "https://github.com/ericbatiste/portfolio"
+  },
+  {
     title: "Our Travis Country",
     description: "A community engagement platform for HOA members featuring user authentication, a protected admin dashboard, and custom email functionality. Built with Next.js and Supabase.",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "Mailgun", "ReactQuill"],
@@ -22,12 +28,6 @@ const projects: Project[] = [
     techStack: ["React", "Router", "Firebase", "Cypress", "JavaScript", "CSS"],
     link: "https://github.com/ericbatiste/cocktail-finder"
   },
-  // {
-  //   title: "Streaming on the Go",
-  //   description: "Mobile app enabling simultaneous live video streaming and location sharing. Integrates Firebase Realtime DB with geolocation tracking and Agora SDK for video streaming.",
-  //   techStack: ["React Native", "JavaScript", "Firebase Realtime DB", "Jest", "CSS", "Agora SDK", "React Native Geolocation"],
-  //   link: "https://github.com/2310-combined/live-stream-react-native"
-  // },
   {
     title: "Fido's Trick Log",
     description: "Dog training web app for cataloging tricks with training videos. Features custom Node.js/Express API, deployment via Render and Vercel, and high accessibility standards.",
