@@ -2,10 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import cloudImg from '@/public/images/cloud.png';
-import skinTrackImg from '@/public/images/skintrack.png';
-import portrait2Img from '@/public/images/portrait2.png';
-import guitarImg from '@/public/images/guitar.png';
+import cloudImg from '@/images/cloud.png';
+import skinTrackImg from '@/images/skintrack.png';
+import portrait2Img from '@/images/portrait2.png';
+import guitarImg from '@/images/guitar.png';
 import ScrollToTopBtn from '@/components/ScrollToTopBtn';
 import {
   motion,

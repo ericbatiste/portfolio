@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import slotCanyonImg from '@/public/images/slotcanyon.png';
-import portraitImg from '@/public/images/portrait.png';
+import slotCanyonImg from '@/images/slotcanyon.png';
+import portraitImg from '@/images/portrait.png';
 
 export default function DevHero() {
   return (
