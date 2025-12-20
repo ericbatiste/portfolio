@@ -2,6 +2,10 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import cloudImg from '@/public/images/cloud.png';
+import skinTrackImg from '@/public/images/skintrack.png';
+import portrait2Img from '@/public/images/portrait2.png';
+import guitarImg from '@/public/images/guitar.png';
 import ScrollToTopBtn from '@/components/ScrollToTopBtn';
 import {
   motion,
@@ -24,15 +28,17 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="snap-y p-2">
+      <div className="from-light to-blue-500 absolute inset-0 z-0 h-screen bg-linear-to-t" />
       <motion.div
         className="fixed inset-0 z-0 h-screen w-full overflow-hidden"
         style={{ y: ySky, scale, filter }}
       >
         <Image
-          src="/images/cloud.png"
+          src={cloudImg}
           alt="Clouds"
           fill
           priority
+          placeholder="blur"
           className="object-cover"
         />
       </motion.div>
@@ -42,7 +48,7 @@ export default function Home() {
         style={{ y: yMtn, scale, filter }}
       >
         <Image
-          src="/images/skintrack.png"
+          src={skinTrackImg}
           alt="Snowy Mountain Tracks"
           fill
           priority
@@ -78,8 +84,8 @@ export default function Home() {
           viewport={{ once: true, amount: 'all' }}
           className="z-40 text-center text-4xl leading-18"
         >
-          <p className="text-deep-canyon drop-shadow-dark drop-shadow-md">
-            <span className="text-lighter text-7xl">Welcome,</span>
+          <p className="text-darkest drop-shadow-dark drop-shadow-md">
+            <span className="text-lightest text-7xl">Welcome,</span>
             <br />
             glad you found me!
           </p>
@@ -100,32 +106,32 @@ export default function Home() {
       >
         <div className="relative h-[80%] w-full md:w-[80%]">
           <div className="grid h-full grid-cols-8 gap-2">
-            <div className="border-lightest col-span-1 rounded-xl md:rounded-3xl border-2" />
+            <div className="border-lightest col-span-1 rounded-xl border-2 md:rounded-3xl" />
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-6/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-6/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-5/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-5/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-4/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-4/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-3/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-3/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-2/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-2/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
             <div className="col-span-1 flex flex-col gap-2">
-              <div className="border-lightest h-1/7 rounded-xl md:rounded-3xl border-2" />
-              <div className="border-lightest grow rounded-xl md:rounded-3xl border-2" />
+              <div className="border-lightest h-1/7 rounded-xl border-2 md:rounded-3xl" />
+              <div className="border-lightest grow rounded-xl border-2 md:rounded-3xl" />
             </div>
-            <div className="border-lightest col-span-1 rounded-xl md:rounded-3xl border-2" />
+            <div className="border-lightest col-span-1 rounded-xl border-2 md:rounded-3xl" />
           </div>
 
           <div>
@@ -134,7 +140,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="border-sky-blue absolute top-3 left-3 md:top-6 md:left-6 h-[92%] w-[82%] border-t-2 border-l-2"
+              className="border-sky-blue absolute top-3 left-3 h-[92%] w-[82%] border-t-2 border-l-2 md:top-6 md:left-6"
             >
               <Link
                 href="/developer"
@@ -145,9 +151,10 @@ export default function Home() {
               >
                 <div className="absolute inset-0">
                   <Image
-                    src="/images/portrait2.png"
+                    src={portrait2Img}
                     alt="Portrait"
                     fill
+                    placeholder='blur'
                     className="object-cover"
                     style={{
                       transform: 'scale(1.6) translateX(-12%) translateY(-10%)',
@@ -166,7 +173,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.2 }}
-              className="border-rich-terracotta absolute right-3 bottom-3 md:right-6 md:bottom-6 h-[92%] w-[82%] border-r-2 border-b-2"
+              className="border-rich-terracotta absolute right-3 bottom-3 h-[92%] w-[82%] border-r-2 border-b-2 md:right-6 md:bottom-6"
             >
               <Link
                 href="/music"
@@ -177,9 +184,10 @@ export default function Home() {
               >
                 <div className="absolute inset-0">
                   <Image
-                    src="/images/guitar.png"
-                    alt="Portrait"
+                    src={guitarImg}
+                    alt="Guitar"
                     fill
+                    placeholder='blur'
                     className="object-cover"
                     style={{
                       transform: 'scale(1.6) translateX(10%) translateY(18%)',

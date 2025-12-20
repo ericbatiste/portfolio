@@ -5,4 +5,5 @@ type NavLink = {
 
 export interface NavLinkProps {
   navlinks: NavLink[]
+  routeHash?: string;
 }

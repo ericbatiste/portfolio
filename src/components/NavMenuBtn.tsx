@@ -4,31 +4,31 @@ import { NavLinkProps } from '@/types/navLinks';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function NavMenuBtn({ navlinks }: NavLinkProps) {
+export default function NavMenuBtn({ navlinks, routeHash }: NavLinkProps) {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [hoverClasses, setHoverClasses] = useState<string[]>([]);
+  const [dynamicClasses, setDynamicClasses] = useState<string[]>(['', '']);
   const pathname = usePathname();
 
   useEffect(() => {
-    let hoverMenuLinkClass = '';
-    let hoverMenuClass = '';
+    let menuLinkClassString = '';
+    let menuClassString = '';
 
     if (pathname === '/') {
-      hoverMenuLinkClass = 'hover:text-howdy-amber hover:border-lightest';
-      hoverMenuClass = 'group-hover:border-darker';
+      menuLinkClassString = 'hover:text-howdy-amber hover:border-lightest';
+      menuClassString = 'group-hover:border-darker';
     } else if (pathname === '/developer') {
-      hoverMenuLinkClass =
-        'hover:text-rich-terracotta hover:border-vibrant-teal';
-      hoverMenuClass = 'group-hover:border-rich-terracotta';
+      menuLinkClassString =
+        'font-mono hover:text-rich-terracotta hover:border-vibrant-teal';
+      menuClassString = 'group-hover:border-rich-terracotta';
     } else if (pathname === '/musician') {
-      hoverMenuLinkClass = 'hover:text-howdy-amber hover:border-lightest';
-      hoverMenuClass = 'group-hover:border-howdy-amber';
+      menuLinkClassString = 'hover:text-howdy-amber hover:border-lightest';
+      menuClassString = 'group-hover:border-howdy-amber';
     } else if (pathname === '/contact') {
-      hoverMenuLinkClass = 'hover:text-cyan-600 hover:border-lightest';
-      hoverMenuClass = 'group-hover:border-cyan-600';
+      menuLinkClassString = 'hover:text-cyan-600 hover:border-lightest';
+      menuClassString = 'group-hover:border-cyan-600';
     }
 
-    setHoverClasses([hoverMenuClass, hoverMenuLinkClass]);
+    setDynamicClasses([menuClassString, menuLinkClassString]);
   }, [pathname]);
 
   const handleMenuClick = () => {
@@ -41,7 +41,7 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
       onClick={handleMenuClick}
     >
       <motion.div
-        className={`${hoverClasses[0]} absolute w-[80%] border transition-colors`}
+        className={`${dynamicClasses[0]} absolute w-[80%] border transition-colors`}
         animate={{
           rotate: menuIsOpen ? 45 : 0,
           y: menuIsOpen ? 0 : -10,
@@ -49,7 +49,7 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
         transition={{ duration: 0.3, ease: 'easeInOut' }}
       />
       <motion.div
-        className={`${hoverClasses[0]} absolute w-[80%] origin-left border transition-colors`}
+        className={`${dynamicClasses[0]} absolute w-[80%] origin-left border transition-colors`}
         animate={{
           x: menuIsOpen ? -40 : 0,
           opacity: menuIsOpen ? 0 : 1,
@@ -57,7 +57,7 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
         transition={{ duration: 0.2, ease: 'easeInOut' }}
       />
       <motion.div
-        className={`${hoverClasses[0]} absolute w-[80%] border transition-colors`}
+        className={`${dynamicClasses[0]} absolute w-[80%] border transition-colors`}
         animate={{
           rotate: menuIsOpen ? -45 : 0,
           y: menuIsOpen ? 0 : 10,
@@ -84,7 +84,7 @@ export default function NavMenuBtn({ navlinks }: NavLinkProps) {
               >
                 <Link
                   href={link.href}
-                  className={`${hoverClasses[1]} ${pathname === '/developer' && 'font-mono'} block w-full border-r p-1 pr-2 text-right text-2xl text-nowrap transition-colors`}
+                  className={`${dynamicClasses[1]} ${pathname === '/developer' && routeHash === link.href && 'text-rich-terracotta border-r-lightest'} block w-full border-r p-1 pr-2 text-right text-2xl text-nowrap transition-colors`}
                 >
                   {link.label}
                 </Link>
