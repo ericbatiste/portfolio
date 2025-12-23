@@ -3,7 +3,7 @@ import { Project } from "../types/project";
 const projects: Project[] = [
   {
     title: "Personal Website",
-    description: "You're looking at it! Built with intention and care to showcase my skills, some projects I've worked on, and my instincs for design and user experience. Like what you see? I'd like to hear from you!",
+    description: "You're looking at it! Built with intention and care to showcase my skills, some projects I've worked on, and my instincts for design and user experience. Like what you see? I'd like to hear from you!",
     techStack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Motion", "Resend"],
     link: "https://github.com/ericbatiste/portfolio"
   },
