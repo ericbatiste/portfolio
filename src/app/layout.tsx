@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from 'next';
 import { Geologica, Quicksand, Spline_Sans_Mono } from 'next/font/google';
 import './globals.css';
