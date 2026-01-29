@@ -18,6 +18,7 @@ export default function MusicNav() {
           className="hover:text-howdy-amber inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>
+
       <div className="hidden space-x-4 md:flex">
         {navLinks.map((link) => (
           <Link
@@ -29,6 +30,7 @@ export default function MusicNav() {
           </Link>
         ))}
       </div>
+      
       <NavMenuBtn navlinks={navLinks} />
     </nav>
   );

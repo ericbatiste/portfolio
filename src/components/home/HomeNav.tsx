@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import NavMenuBtn from '../NavMenuBtn';
 import EDBLogo from '../../images/EDBLogo.svg';
 
@@ -19,6 +18,7 @@ export default function HomeNav() {
       >
         Developer
       </Link>
+
       <Link href="/">
         <EDBLogo
           width={80}
@@ -28,12 +28,14 @@ export default function HomeNav() {
           className="hover:text-dark inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>
+
       <Link
         href="/music"
         className="hover:text-dark hidden text-2xl transition duration-300 hover:cursor-pointer md:block"
       >
         Musician
       </Link>
+
       <NavMenuBtn navlinks={navLinks} />
     </div>
   );

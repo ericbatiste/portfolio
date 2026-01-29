@@ -21,6 +21,7 @@ export default function ContactNav() {
           className="inline-block transition duration-300 hover:cursor-pointer hover:text-cyan-600 [&_path]:stroke-8"
         />
       </Link>
+
       <div className="hidden space-x-4 md:flex">
         {navLinks.map((link) => (
           <Link
@@ -32,6 +33,7 @@ export default function ContactNav() {
           </Link>
         ))}
       </div>
+      
       <NavMenuBtn navlinks={navLinks} />
     </nav>
   );
