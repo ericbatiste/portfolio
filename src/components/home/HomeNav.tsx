@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import NavMenuBtn from '../NavMenuBtn';
+import EDBLogo from '../../images/EDBLogo.svg';
 
 export default function HomeNav() {
   const navLinks = [
@@ -21,7 +23,14 @@ export default function HomeNav() {
         href="/"
         className="hover:text-dark text-5xl font-bold transition duration-300 hover:cursor-pointer"
       >
-        EDB
+        <EDBLogo
+          width={80}
+          height={80}
+          fill='none'
+          stroke='currentColor'
+          strokeWidth={10}
+          className="inline-block text-lightest"
+        />
       </Link>
       <Link
         href="/music"

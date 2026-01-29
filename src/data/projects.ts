@@ -28,15 +28,15 @@ const projects: Project[] = [
     techStack: ["React", "Router", "Firebase", "Cypress", "JavaScript", "CSS"],
     link: "https://github.com/ericbatiste/cocktail-finder"
   },
-  {
-    title: "Fido's Trick Log",
-    description: "Dog training web app for cataloging tricks with training videos. Features custom Node.js/Express API, deployment via Render and Vercel, and high accessibility standards.",
-    techStack: ["React", "Router", "CSS", "Cypress", "Node.js", "Express"],
-    link: {
-      frontend: "https://github.com/ericbatiste/dog-tricks-ui",
-      backend: "https://github.com/ericbatiste/dog-tricks-api",
-    }
-  }
+  // {
+  //   title: "Fido's Trick Log",
+  //   description: "Dog training web app for cataloging tricks with training videos. Features custom Node.js/Express API, deployment via Render and Vercel, and high accessibility standards.",
+  //   techStack: ["React", "Router", "CSS", "Cypress", "Node.js", "Express"],
+  //   link: {
+  //     frontend: "https://github.com/ericbatiste/dog-tricks-ui",
+  //     backend: "https://github.com/ericbatiste/dog-tricks-api",
+  //   }
+  // }
 ];
 
 export default projects;
