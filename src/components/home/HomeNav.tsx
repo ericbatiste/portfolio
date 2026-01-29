@@ -19,17 +19,13 @@ export default function HomeNav() {
       >
         Developer
       </Link>
-      <Link
-        href="/"
-        className="hover:text-dark text-5xl font-bold transition duration-300 hover:cursor-pointer"
-      >
+      <Link href="/">
         <EDBLogo
           width={80}
           height={80}
-          fill='none'
-          stroke='currentColor'
-          strokeWidth={10}
-          className="inline-block text-lightest"
+          fill="none"
+          stroke="currentColor"
+          className="hover:text-dark inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>
       <Link
