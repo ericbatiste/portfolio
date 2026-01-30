@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import NavMenuBtn from '../NavMenuBtn';
-import EDBLogo from '../../images/EDBLogo.svg';
+import EDBLogo from '@/images/EDBLogo.svg';
 import { useEffect, useState } from 'react';
 
 export default function DevNav() {
@@ -31,8 +31,6 @@ export default function DevNav() {
         <EDBLogo
           width={60}
           height={60}
-          fill="none"
-          stroke="currentColor"
           className="hover:text-rich-terracotta inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>

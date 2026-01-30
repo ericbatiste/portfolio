@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import NavMenuBtn from '../NavMenuBtn';
-import EDBLogo from '../../images/EDBLogo.svg';
+import EDBLogo from '@/images/EDBLogo.svg';
 
 export default function ContactNav() {
   const navLinks = [
@@ -16,8 +16,6 @@ export default function ContactNav() {
         <EDBLogo
           width={60}
           height={60}
-          fill="none"
-          stroke="currentColor"
           className="inline-block transition duration-300 hover:cursor-pointer hover:text-cyan-600 [&_path]:stroke-8"
         />
       </Link>

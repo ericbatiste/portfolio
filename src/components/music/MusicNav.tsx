@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import NavMenuBtn from '../NavMenuBtn';
-import EDBLogo from '../../images/EDBLogo.svg';
+import EDBLogo from '@/images/EDBLogo.svg';
 
 export default function MusicNav() {
   const navLinks = [{ href: '/contact', label: 'Contact' }];
@@ -13,8 +13,6 @@ export default function MusicNav() {
         <EDBLogo
           width={60}
           height={60}
-          fill="none"
-          stroke="currentColor"
           className="hover:text-howdy-amber inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>
@@ -30,7 +28,7 @@ export default function MusicNav() {
           </Link>
         ))}
       </div>
-      
+
       <NavMenuBtn navlinks={navLinks} />
     </nav>
   );

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import NavMenuBtn from '../NavMenuBtn';
-import EDBLogo from '../../images/EDBLogo.svg';
+import EDBLogo from '@/images/EDBLogo.svg';
 
 export default function HomeNav() {
   const navLinks = [
@@ -23,8 +23,6 @@ export default function HomeNav() {
         <EDBLogo
           width={80}
           height={80}
-          fill="none"
-          stroke="currentColor"
           className="hover:text-dark inline-block transition duration-300 hover:cursor-pointer [&_path]:stroke-8"
         />
       </Link>
